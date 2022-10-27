@@ -1,0 +1,3 @@
+[submodule "modules/private/emacs-ccls"]
+	path = modules/private/emacs-ccls
+	url = https://github.com/emacs-lsp/emacs-ccls.git
