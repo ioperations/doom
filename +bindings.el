@@ -62,6 +62,8 @@
  :n "go"   (λ! (message "%S" (text-properties-at (point))))
  :n "gj"   #'evilem-motion-next-line
  :n "gk"   #'evilem-motion-previous-line
+ :n "gd"   #'+lookup/definition
+ :n "gr"   #'+lookup/references
 
  :n "[ M-u" #'symbol-overlay-switch-backward
  :n "] M-i" #'symbol-overlay-switch-forward
@@ -146,11 +148,11 @@
      "f" #'lsp-format-buffer
      "a" #'lsp-execute-code-action
      "l" #'lsp-ui-sideline-mode
-     "d" #'lsp-ui-doc-mode
+     "d" #'+lookup/definition
      "e" #'flymake-show-diagnostics-buffer
      "i" #'lsp-ui-imenu
-     "r" #'lsp-rename
-     "R" #'lsp-restart-workspace
+     "R" #'lsp-rename
+     "r" #'+lookup/references
      "w" #'lsp-ui-peek-find-workspace-symbol
      )
    :desc "lispyville" :n "L" (+my/prefix-M-x "lispyville ")

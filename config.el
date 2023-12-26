@@ -2,6 +2,17 @@
 (load! "+bindings")
 (load! "+org")
 (load! "+ui")
+;; (use-package! lsp-bridge
+;;   :config
+;;   (setq lsp-bridge-enable-log :t)
+;;   (global-lsp-bridge-mode))
+
+;; enable it in most programming languages
+(add-hook 'prog-mode-hook #'eglot-ensure)
+(add-hook 'prog-mode-hook #'tree-sitter-hl-mode)
+(add-hook 'prog-mode-hook #'highlight-indent-guides-mode)
+
+(setq highlight-indent-guides-method 'column)
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
