@@ -9,6 +9,19 @@
 
 ;; enable it in most programming languages
 (add-hook 'prog-mode-hook #'eglot-ensure)
+
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               `(c++-mode . ("clangd" "--completion-style=detailed" 
+                             "--background-index" 
+                             "--suggest-missing-includes" 
+                             "--all-scopes-completion" 
+                             "--header-insertion=iwyu" 
+                             "--offset-encoding=utf-32" 
+                             "--enable-config" 
+                             "-log=verbose")
+                                      )))
+
 (add-hook 'prog-mode-hook #'tree-sitter-hl-mode)
 (add-hook 'prog-mode-hook #'highlight-indent-guides-mode)
 
