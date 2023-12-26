@@ -52,6 +52,7 @@
                     (progn (+my/avy-document-symbol t)
                            (+my/find-definitions))
                   (avy-goto-word-0 nil)))
+ :n "s"    (λ! (avy-goto-word-0 nil))
  ;; outline
  :n "z;"   (λ! (+my/avy-document-symbol nil))
 

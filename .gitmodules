@@ -1,0 +1,3 @@
+[submodule ".local/emacs-ccls"]
+	path = .local/emacs-ccls
+	url = https://github.com/emacs-lsp/emacs-ccls.git

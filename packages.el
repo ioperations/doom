@@ -14,6 +14,15 @@
 (package! tree-sitter)
 (package! tree-sitter-langs)
 (package! highlight-indent-guides)
+(use-package lsp-ui)
+
+(use-package lsp-mode
+  :ensure t
+  :commands (lsp lsp-deferred)
+  :hook ((lsp-mode . lsp-enable-which-key-integration)
+         (lsp-managed-mode . lsp-modeline-diagnostics-mode)
+         (lsp-mode . lsp-headerline-breadcrumb-mode)
+         (lsp-mode . lsp-modeline-code-actions-mode)))
 
 ;; (when (package! lsp-bridge
 ;;         :recipe (:host github
