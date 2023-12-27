@@ -26,6 +26,12 @@
 (add-hook 'prog-mode-hook #'highlight-indent-guides-mode)
 
 (setq highlight-indent-guides-method 'column)
+(global-git-gutter-mode +1)
+(custom-set-variables
+ '(git-gutter:window-width 2)
+ '(git-gutter:modified-sign "☁")
+ '(git-gutter:added-sign "☀")
+ '(git-gutter:deleted-sign "☂"))
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
