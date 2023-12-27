@@ -14,6 +14,31 @@
 (package! tree-sitter)
 (package! tree-sitter-langs)
 (package! highlight-indent-guides)
+(package! avy)
+(package! lispyville)
+(package! annotate)
+(package! eshell-autojump)
+(package! evil-collection)
+(package! evil-nerd-commenter)
+(package! frog-jump-buffer)
+(package! git-link)
+(package! link-hint)
+(package! htmlize)
+(package! rg)
+(package! smart-forward)
+(package! symbol-overlay)
+(package! tldr)
+(package! try)
+
+(package! d-mode)
+(package! julia-repl)
+
+(package! racer :disable t)
+
+(package! function-args)
+;; (package! lpy :recipe (:fetcher github :repo "abo-abo/lpy" :files ("*")))
+
+(package! selectrum)
 (use-package lsp-ui)
 
 (use-package lsp-mode
