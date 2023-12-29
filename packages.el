@@ -39,15 +39,9 @@
 ;; (package! lpy :recipe (:fetcher github :repo "abo-abo/lpy" :files ("*")))
 
 (package! selectrum)
-(use-package lsp-ui)
+(package! lsp-ui)
 
-(use-package lsp-mode
-  :ensure t
-  :commands (lsp lsp-deferred)
-  :hook ((lsp-mode . lsp-enable-which-key-integration)
-         (lsp-managed-mode . lsp-modeline-diagnostics-mode)
-         (lsp-mode . lsp-headerline-breadcrumb-mode)
-         (lsp-mode . lsp-modeline-code-actions-mode)))
+(package! lsp-mode)
 
 ;; (when (package! lsp-bridge
 ;;         :recipe (:host github

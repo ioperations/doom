@@ -105,6 +105,15 @@
 (use-package lsp-ui
   :ensure t)
 
+(use-package lsp-mode
+  :ensure t
+  :commands (lsp lsp-deferred)
+  :hook ((lsp-mode . lsp-enable-which-key-integration)
+         (lsp-managed-mode . lsp-modeline-diagnostics-mode)
+         (lsp-mode . lsp-headerline-breadcrumb-mode)
+         (lsp-mode . lsp-modeline-code-actions-mode)))
+
+
 (setq lsp-lens-enable nil)
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
