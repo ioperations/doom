@@ -4,9 +4,6 @@
 ;; To install a package with Doom you must declare them here and run 'doom sync'
 ;; on the command line, then restart Emacs for the changes to take effect -- or
 ;; use 'M-x doom/reload'.
-;; company-irony company-irony-c-headers flycheck-irony irony irony-eldoc ivy-rtags rtags)
-;; 
-;; (disable-packages! lsp-mode ) 
 
 (package! affe)
 (package! fzf)
@@ -29,29 +26,26 @@
 (package! symbol-overlay)
 (package! tldr)
 (package! try)
+(package! eldoc-box)
 
-(package! d-mode)
-(package! julia-repl)
+(package! company-irony)
+(package! company-irony-c-headers)
+(package! flycheck-irony)
+(package! irony)
+(package! irony-eldoc)
 
 (package! racer :disable t)
 
 (package! function-args)
-;; (package! lpy :recipe (:fetcher github :repo "abo-abo/lpy" :files ("*")))
 
 (package! selectrum)
 (package! lsp-ui)
 
 (package! lsp-mode)
 
-;; (when (package! lsp-bridge
-;;         :recipe (:host github
-;;                  :repo "manateelazycat/lsp-bridge"
-;;                  :branch "master"
-;;                  :files ("*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
-;;                  ;; do not perform byte compilation or native compilation for lsp-bridge
-;;                  :build (:not compile)))
-;;   (package! markdown-mode)
-;;   (package! yasnippet))
+(package! markdown-mode)
+(package! yasnippet)
+
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)
 

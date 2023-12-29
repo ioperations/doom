@@ -2,10 +2,6 @@
 (load! "+bindings")
 (load! "+org")
 (load! "+ui")
-;; (use-package! lsp-bridge
-;;   :config
-;;   (setq lsp-bridge-enable-log :t)
-;;   (global-lsp-bridge-mode))
 
 ;; enable it in most programming languages
 (add-hook 'prog-mode-hook #'eglot-ensure)
@@ -24,6 +20,8 @@
 
 (add-hook 'prog-mode-hook #'tree-sitter-hl-mode)
 (add-hook 'prog-mode-hook #'highlight-indent-guides-mode)
+(add-hook 'prog-mode-hook #'eldoc-box-hover-mode)
+
 
 (setq highlight-indent-guides-method 'column)
 (global-git-gutter-mode +1)
@@ -34,8 +32,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-;; (setq user-full-name "John Doe"
-;;       user-mail-address "john@doe.com")
+(setq user-full-name "aodong.qin"
+    user-mail-address "ioperations.c@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -72,6 +70,10 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+(custom-set-variables
+ '(ediff-window-setup-function 'ediff-setup-windows-plain)
+ '(ediff-diff-options "-w")
+ '(ediff-split-window-function 'split-window-horizontally))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -115,5 +117,3 @@
 
 
 (setq lsp-lens-enable nil)
-;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
-;; they are implemented.
