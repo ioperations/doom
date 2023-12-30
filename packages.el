@@ -27,6 +27,7 @@
 (package! tldr)
 (package! try)
 (package! eldoc-box)
+(package! awesome-tab)
 
 (package! company-irony)
 (package! company-irony-c-headers)
@@ -45,6 +46,7 @@
 
 (package! markdown-mode)
 (package! yasnippet)
+(package! all-the-icons)
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)

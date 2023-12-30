@@ -115,5 +115,8 @@
          (lsp-mode . lsp-headerline-breadcrumb-mode)
          (lsp-mode . lsp-modeline-code-actions-mode)))
 
+(use-package awesome-tab
+  :config
+  (awesome-tab-mode t))
 
 (setq lsp-lens-enable nil)
