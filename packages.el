@@ -29,6 +29,20 @@
 (package! eldoc-box)
 (package! awesome-tab)
 
+(use-package recentf
+  :commands (recentf-open-files)
+  :hook (after-init . recentf-mode)
+  :bind ("C-x C-r" . recentf-open-files)
+  :init (setq recentf-max-saved-items 500
+              recentf-exclude
+              '("\\.?cache" ".cask" "url" "COMMIT_EDITMSG\\'" "bookmarks"
+                "\\.\\(?:gz\\|gif\\|svg\\|png\\|jpe?g\\|bmp\\|xpm\\)$"
+                "\\.?ido\\.last$" "\\.revive$" "/G?TAGS$" "/.elfeed/"
+                "^/tmp/" "^/var/folders/.+$" ; "^/ssh:"
+                (lambda (file) (file-in-directory-p file package-user-dir))))
+  :config
+  (push (expand-file-name recentf-save-file) recentf-exclude))
+
 (package! company-irony)
 (package! company-irony-c-headers)
 (package! flycheck-irony)
