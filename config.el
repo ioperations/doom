@@ -347,7 +347,7 @@
 (after! quickrun
   (quickrun-add-command "c++/c1z"
     '((:command . "clang++")
-      (:exec    . ("%c -std=c++1z %o -o %e %s"
+      (:exec    . ("%c -std=c++17 %o -lgtest -lgtest_main -fsanitize=address -lpthread -o %e %s"
                    "%e %a"))
       (:remove  . ("%e")))
     :default "c++"))

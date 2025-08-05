@@ -112,7 +112,7 @@
 
 (map! :leader
    "SPC" #'frog-jump-buffer
-   "e" #'treemacs
+   "e" #'+treemacs/toggle
    ;; :n "M-u" (+my/simulate-key "SPC [")
    ;; :n "M-i" (+my/simulate-key "SPC ]")
    (:prefix ("y" . "app")
