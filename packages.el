@@ -27,7 +27,18 @@
 (package! tldr)
 (package! try)
 (package! eldoc-box)
-(package! awesome-tab)
+;; (package! awesome-tab)
+(use-package centaur-tabs
+  :demand
+  :config
+  (centaur-tabs-mode t)
+  :bind
+  ("C-<prior>" . centaur-tabs-backward)
+  ("C-<next>" . centaur-tabs-forward))
+
+(setq centaur-tabs-set-icons t)
+(setq centaur-tabs-icon-type 'all-the-icons)  ; or 'nerd-icons
+(setq centaur-tabs-height 32)
 
 (use-package recentf
   :commands (recentf-open-files)
