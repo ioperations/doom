@@ -485,6 +485,10 @@
 ;; TODO workaround emacsclient -nw a.cc
 (advice-add #'+doom-dashboard|make-frame :override #'ignore)
 
+(setq toggle-debug-on-error nil)
+(setq display-line-numbers-type 'relative)
+(setq display-line-numbers 'relative)
+
 (let ((profile "~/.config/doom/profile.el"))
   (when (file-exists-p profile)
     (load-file profile)))
